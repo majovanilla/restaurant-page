@@ -13,6 +13,17 @@ function render() {
 
   const navMenu = document.querySelector('.navbar-menu');
   const section = document.querySelector('.landing-section');
+  const menuList = Array.from(document.getElementsByClassName('navbar-link'));
+
+  const activeLink = (selectedMenu) => {
+    menuList.forEach(link => {
+      if (selectedMenu === link.id) {
+        link.classList.add('active-link');
+      } else {
+        link.classList.remove('active-link');
+      }
+    });
+  };
 
   const menuClick = (event) => {
     const selection = event.target.id;
@@ -21,36 +32,36 @@ function render() {
       case 'home':
         section.innerHTML = '';
         home();
+        activeLink('home');
         break;
       case 'our-story':
         section.innerHTML = '';
         story();
+        activeLink('our-story');
         break;
       case 'our-specialty':
         section.innerHTML = '';
         specialty();
+        activeLink('our-specialty');
         break;
       case 'menu':
         section.innerHTML = '';
         menu();
+        activeLink('menu');
         break;
       case 'contact':
         section.innerHTML = '';
         contact();
+        activeLink('contact');
         break;
       default:
         section.innerHTML = '';
         home();
+        activeLink('home');
     }
   };
 
-  // const activeLink = (selectedMenu) => {
-
-  //   if selectedMenu.id === 
-  // };
-
   navMenu.addEventListener('click', menuClick);
-  activeLink();
 }
 
 render();
