@@ -6,37 +6,51 @@ import specialty from './specialty';
 import menu from './menu';
 import contact from './contact';
 
-pageLoad();
+function render() {
 
-const navMenu = document.querySelector('.navbar-menu');
+  pageLoad();
+  home();
 
-const menuClick = (event) => {
-  const selection = event.target.textContent;
-  const homeE = document.getElementById('home');
-  const storyE = document.getElementById('our-story');
-  const specialtyE = document.getElementById('our-specialty');
-  const menuE = document.getElementById('menu');
-  const contactE = document.getElementById('contact');
+  const navMenu = document.querySelector('.navbar-menu');
+  const section = document.querySelector('.landing-section');
 
-  switch (selection) {
-    case homeE:
-      home();
-      break;
-    case storyE:
-      story();
-      break;
-    case specialtyE:
-      specialty();
-      break;
-    case menuE:
-      menu();
-      break;
-    case contactE:
-      contact();
-      break;
-    default:
-      home();
-  }
-};
+  const menuClick = (event) => {
+    const selection = event.target.id;
 
-navMenu.addEventListener('click', menuClick);
+    switch (selection) {
+      case 'home':
+        section.innerHTML = '';
+        home();
+        break;
+      case 'our-story':
+        section.innerHTML = '';
+        story();
+        break;
+      case 'our-specialty':
+        section.innerHTML = '';
+        specialty();
+        break;
+      case 'menu':
+        section.innerHTML = '';
+        menu();
+        break;
+      case 'contact':
+        section.innerHTML = '';
+        contact();
+        break;
+      default:
+        section.innerHTML = '';
+        home();
+    }
+  };
+
+  // const activeLink = (selectedMenu) => {
+
+  //   if selectedMenu.id === 
+  // };
+
+  navMenu.addEventListener('click', menuClick);
+  activeLink();
+}
+
+render();

@@ -5,14 +5,13 @@ function Story() {
   const text = document.createElement('p');
 
   const renderStory = () => {
-    section.classList.add('cover');
+    section.classList.add('story');
     title.classList.add('main-title', 'text-white');
     text.classList.add('text-white', 'text-center');
-    title.textContent = 'Conscious Cuisine';
+    title.textContent = 'Our story';
     text.textContent = 'We deliver an amazing experience without any harm';
     section.append(title);
     section.append(text);
-    content.append(section);
   };
 
   renderStory();

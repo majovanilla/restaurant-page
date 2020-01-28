@@ -1,5 +1,4 @@
 function home() {
-  const content = document.getElementById('content');
   const section = document.querySelector('.landing-section');
   const title = document.createElement('h1');
   const text = document.createElement('p');
@@ -12,7 +11,6 @@ function home() {
     text.textContent = 'We deliver an amazing experience without any harm';
     section.append(title);
     section.append(text);
-    content.append(section);
   };
 
   renderHome();

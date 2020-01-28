@@ -1,18 +1,16 @@
 function Specialty() {
-  const content = document.getElementById('content');
   const section = document.querySelector('.landing-section');
   const title = document.createElement('h1');
   const text = document.createElement('p');
 
   const renderSpecialty = () => {
-    section.classList.add('cover');
+    section.classList.add('specialty');
     title.classList.add('main-title', 'text-white');
     text.classList.add('text-white', 'text-center');
-    title.textContent = 'Conscious Cuisine';
+    title.textContent = 'What we do best';
     text.textContent = 'We deliver an amazing experience without any harm';
     section.append(title);
     section.append(text);
-    content.append(section);
   };
 
   renderSpecialty();

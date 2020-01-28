@@ -1,5 +1,5 @@
 function header() {
-
+  const content = document.getElementById('content');
   const header = document.createElement('header');
   const name = document.createElement('div');
   const nameP = document.createElement('p');
@@ -12,6 +12,7 @@ function header() {
     link.textContent = item;
     const name = item.replace(' ', '-').toLowerCase();
     link.setAttribute('id', name);
+    link.classList.add('text-white', 'navbar-link');
     link.href = '#';
     const li = document.createElement('li');
     li.appendChild(link);
@@ -20,7 +21,7 @@ function header() {
 
   const addHeader = () => {
     header.classList.add('nav-bar');
-    name.classList.add('navbar-name', 'd-flex', 'align-self-center');
+    name.classList.add('navbar-name', 'd-flex', 'align-self-center', 'shift');
     name.appendChild(nameP);
     nameP.appendChild(nameText);
     menuList.classList.add('navbar-menu');
