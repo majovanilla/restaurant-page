@@ -55,6 +55,7 @@ table {
 /* Header */
 
 .nav-bar {
+  z-index: 1;
   position: fixed;
   top: 0;
   display: flex;
@@ -131,6 +132,7 @@ table {
 
 .text {
   padding-left: 60%;
+  font-size: 1.5rem;
 }
 
 .cover {
@@ -139,11 +141,36 @@ table {
 
 /* Our story */
 
-  
+.story {
+  padding: 150px 200px;
+  display: flex;
+  background: url('../img/gray-bg.jpg') center / cover no-repeat;
+}
+
+.story-title {
+  width: 100%;
+  padding-bottom: 35px;
+  font-size: 3rem;
+  font-weight: bold;
+  color: #2b2a2a;
+}
+
+.story-text {
+  color: #2b2a2a;
+  font-size: 1.5rem;
+  line-height: 1.2;
+  width: 100%;
+}
+
+.story-img {
+  width: 50vh;
+  height: 50vh;
+  background: url(../img/story-img.jpg) center / cover no-repeat;
+}
 
 /* What we do */
 
-#what-we-do {
+.specialty   {
   background: url(../img/section2.png) center / cover no-repeat;
 }
 

@@ -7,7 +7,6 @@ import menu from './menu';
 import contact from './contact';
 
 function render() {
-
   pageLoad();
   home();
 
@@ -25,37 +24,44 @@ function render() {
     });
   };
 
+  const clearSection = () => {
+    const all = section.classList;
+    section.innerHTML = '';
+    section.classList.remove(...all);
+    section.classList.add('landing-section');
+  };
+
   const menuClick = (event) => {
     const selection = event.target.id;
 
     switch (selection) {
       case 'home':
-        section.innerHTML = '';
+        clearSection();
         home();
         activeLink('home');
         break;
       case 'our-story':
-        section.innerHTML = '';
+        clearSection();
         story();
         activeLink('our-story');
         break;
       case 'our-specialty':
-        section.innerHTML = '';
+        clearSection();
         specialty();
         activeLink('our-specialty');
         break;
       case 'menu':
-        section.innerHTML = '';
+        clearSection();
         menu();
         activeLink('menu');
         break;
       case 'contact':
-        section.innerHTML = '';
+        clearSection();
         contact();
         activeLink('contact');
         break;
       default:
-        section.innerHTML = '';
+        clearSection();
         home();
         activeLink('home');
     }

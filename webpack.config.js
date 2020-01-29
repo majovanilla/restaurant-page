@@ -1,5 +1,5 @@
 const path = require('path');
-
+const ImageminPlugin = require('imagemin-webpack-plugin').default;
 
 module.exports = {
   entry: {
@@ -16,14 +16,6 @@ module.exports = {
   },
   module: {
     rules: [
-      //   {
-      //     test: /\.js$/,
-      //     exclude: /(node_modules|bower_components)/,
-      //     loader: "babel-loader",
-      //     options: {
-      //       presets: ['@babel/preset-env']
-      //     }
-      //   },
       {
         test: /\.(css)$/,
         use: [
@@ -37,24 +29,16 @@ module.exports = {
           'file-loader',
         ],
       },
-      //   {
-      //     test: /\.(woff|woff2|eot|ttf|otf)$/,
-      //     use: [
-      //       'file-loader',
-      //     ],
-      //   },
-      //   {
-      //     test: /\.(csv|tsv)$/,
-      //     use: [
-      //       'csv-loader',
-      //     ],
-      //   },
-      //   {
-      //     test: /\.xml$/,
-      //     use: [
-      //       'xml-loader',
-      //     ],
-      //   },
+    ],
+    plugins: [
+      // Make sure that the plugin is after any plugins that add images
+      new ImageminPlugin({
+        test: 'imag/**',
+        disable: process.env.NODE_ENV !== 'production', // Disable during development
+        pngquant: {
+          quality: '95-100',
+        },
+      }),
     ],
   },
 };
