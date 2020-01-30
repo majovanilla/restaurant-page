@@ -6,11 +6,11 @@ function Story() {
   const img = document.createElement('div');
 
   const renderStory = () => {
-    section.classList.add('story', 'justify-content-around');
+    section.classList.add('story', 'justify-content-between');
     title.classList.add('text-center', 'story-title');
     text.classList.add('text-justify', 'story-text');
     img.classList.add('story-img');
-    div.classList.add('text-container', 'col-4');
+    div.classList.add('text-container', 'col-6');
     title.textContent = 'Our story';
     text.innerHTML += `We love animals. <br><br>
                       So when we were faced with the difficult situation

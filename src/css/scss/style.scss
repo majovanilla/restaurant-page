@@ -1,0 +1,179 @@
+@use 'reset';
+
+/* Variables */
+
+$gray: #2b2a2a;
+$white: #fff;
+
+/* Extends */
+
+%section-padding {
+  padding: 120px 100px;
+  display: flex;
+}
+
+%text-style {
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
+
+%main-title-style {
+  font-size: 3rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+%img-div {
+  width: 50vh;
+  height: 50vh;
+}
+
+%white-img-bg {
+  background: url(../../img/gray-bg.jpg) center / cover no-repeat;
+}
+
+/* Header */
+
+.nav-bar {
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  display: flex;
+  width: 100%;
+  padding: 5px 30px;
+  background: $gray;
+  color: $white;
+  height: 70px;
+}
+
+.navbar-menu {
+  width: 70%; 
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  list-style: none;
+}
+
+.navbar-name {
+  width: 100%;
+  font-size: 1.5rem;
+  padding: 10px;
+}
+
+.navbar-link {
+  font-size: 1rem;
+  transition: font-size ease-in-out 0.3s;
+
+}
+
+.navbar-link:hover {
+  text-decoration: none;
+  font-size: 2rem;
+}
+
+.active-link {
+  padding-bottom: 5px;
+  border-bottom: 1px $white solid;
+}
+
+/* Main */
+
+.landing-section {
+  margin-top: 70px;
+  width: 100%;
+  height: 90vh;
+}
+
+.opacity {
+  background-color: black;
+  opacity: 0.3;
+  width: 100%;
+  height: 100vh;
+}
+
+.section-text {
+  width: 50%;
+  padding: 15px;
+}
+
+.section-image {
+  
+}
+
+/* Cover */
+
+.main-title {
+  @extend %main-title-style;
+  color: $white;
+}
+
+.text, 
+.specialty-text {
+  @extend %text-style;
+  color: $white;
+}
+
+.cover {
+  @extend %section-padding;
+  background: url(../../img/cover.png) center / cover no-repeat;
+}
+
+/* Our story */
+
+.story {
+  background: url(../../img/gray-bg.jpg) center / cover no-repeat;
+  @extend %section-padding;
+}
+
+.story-title {
+  width: 100%;
+  padding-bottom: 35px;
+  font-size: 3rem;
+  font-weight: bold;
+  color: $gray;
+}
+
+.story-text {
+  color: $gray;
+  @extend %text-style;
+  width: 100%;
+}
+
+.story-img {
+  @extend %img-div;
+  background: url(../../img/story-img.jpg) center / cover no-repeat;
+}
+
+/* Our Specialty */
+
+.specialty {
+  background: url(../../img/section2.png) center / cover no-repeat;
+  @extend %section-padding;
+}
+
+.specialty-title  {
+  @extend %main-title-style;
+  color: $white;
+}
+
+/* Menu */
+
+.menu {
+  @extend %section-padding;
+  @extend %white-img-bg;
+  color: $gray;
+}
+
+.menu-title {
+  @extend %main-title-style;
+  padding-bottom: 40px;
+}
+
+/* Footer */
+
+.footer {
+  height: 70px;
+  padding: 30px;
+  bottom: 0;
+  background: $gray;
+}

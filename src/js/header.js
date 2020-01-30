@@ -21,7 +21,7 @@ function header() {
 
   const addHeader = () => {
     header.classList.add('nav-bar');
-    name.classList.add('navbar-name', 'd-flex', 'align-self-center', 'shift');
+    name.classList.add('navbar-name');
     name.appendChild(nameP);
     nameP.appendChild(nameText);
     menuList.classList.add('navbar-menu');

@@ -7,13 +7,16 @@ function home() {
                 <br>
                 That's why we partnered with AmazingAnimals.org to provide <br> suffering-free meals to you.
                 </p>`;
+  const div = document.createElement('div');
 
   const renderHome = () => {
-    section.classList.add('cover', 'justify-content-center');
-    title.classList.add('main-title', 'text-white', 'pb-5');
+    section.classList.add('cover', 'justify-content-end');
+    title.classList.add('main-title', 'pb-5');
     title.textContent = 'Conscious Cuisine';
-    section.append(title);
-    section.innerHTML += text;
+    div.classList.add('col-4');
+    div.append(title);
+    div.innerHTML += text;
+    section.append(div);
   };
 
   renderHome();

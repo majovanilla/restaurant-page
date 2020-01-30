@@ -1,4 +1,4 @@
-import '../css/style.css';
+import '../css/scss/style.scss';
 import pageLoad from './page-load';
 import home from './home';
 import story from './story';
@@ -11,7 +11,7 @@ function render() {
   home();
 
   const navMenu = document.querySelector('.navbar-menu');
-  const section = document.querySelector('.landing-section');
+  const section = document.querySelector('.landing-section', 'align-items-center');
   const menuList = Array.from(document.getElementsByClassName('navbar-link'));
 
   const activeLink = (selectedMenu) => {
