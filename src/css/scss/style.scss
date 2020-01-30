@@ -167,6 +167,28 @@ $white: #fff;
 .menu-title {
   @extend %main-title-style;
   padding-bottom: 40px;
+  color: $gray;
+}
+
+/* Contact */
+
+.contact {
+  @extend %section-padding;
+  color: $gray;
+}
+
+.contact-title {
+  @extend %main-title-style;
+  padding-bottom: 40px;
+}
+
+.contact-img {
+  @extend %img-div;
+  background: url(../../img/contact.jpg) center / cover no-repeat;
+}
+
+.contact-text {
+  @extend %text-style;
 }
 
 /* Footer */
