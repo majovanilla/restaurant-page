@@ -44,6 +44,7 @@ Give a ⭐️ if you like this project!
 
 - Final Project of the Rails Section from the [Microverse Curriculum] (https://www.microverse.org/)
 - We follow the instructions of [The Odin Project](https://www.theodinproject.com/courses/javascript/lessons/restaurant-page)
+- CSS Reset from [Meyer Web](http://meyerweb.com/eric/tools/css/reset/)
 
 ## 📝 License
 
