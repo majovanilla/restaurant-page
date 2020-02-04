@@ -8,8 +8,8 @@ function contact() {
   const renderContact = () => {
     section.classList.add('contact');
     title.classList.add('contact-title');
-    text.classList.add('contact-text');
-    img.classList.add('contact-img');
+    text.classList.add('contact-text', 'col-10', 'mx-auto', 'text-center');
+    img.classList.add('contact-img', 'col-6');
     div.classList.add('text-container', 'col-6', 'pl-5');
     title.textContent = 'Reservations';
     text.innerHTML += `Make your day special by dinning with us in a great atmosphere.<br><br>

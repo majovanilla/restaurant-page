@@ -10,7 +10,7 @@ function render() {
   pageLoad();
   home();
 
-  const navMenu = document.querySelector('.navbar-menu');
+  const navMenu = document.querySelector('.navbar-nav');
   const section = document.querySelector('.landing-section', 'align-items-center');
   const menuList = Array.from(document.getElementsByClassName('navbar-link'));
 

@@ -1,9 +1,12 @@
 @use 'reset';
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script|Open+Sans&display=swap');
 
 /* Variables */
 
 $gray: #2b2a2a;
 $white: #fff;
+$cursive: 'Dancing Script', cursive;
+$sans: 'Open Sans', sans-serif;
 
 /* Extends */
 
@@ -13,23 +16,42 @@ $white: #fff;
 }
 
 %text-style {
+  font-family: $sans;
   font-size: 1.5rem;
   line-height: 1.5;
 }
 
 %main-title-style {
-  font-size: 3rem;
+  font-family: $cursive;
+  font-size: 5rem;
   text-align: center;
   font-weight: bold;
+  letter-spacing: 3px;
+}
+
+%section-title-style {
+  @extend %main-title-style;
+  margin-bottom: 35px;
+  font-size: 3rem;
 }
 
 %img-div {
-  width: 50vh;
-  height: 50vh;
+  height: 100%;
 }
 
 %white-img-bg {
   background: url(../../img/gray-bg.jpg) center / cover no-repeat;
+}
+
+%dark-opacity {
+  content: "";
+  width: 100%;
+  height: 90vh;
+  background-color: black;
+  opacity: 0.5;
+  position: absolute;
+  left: 0;
+  top: 70px;
 }
 
 /* Header */
@@ -40,24 +62,14 @@ $white: #fff;
   top: 0;
   display: flex;
   width: 100%;
-  padding: 5px 30px;
+  padding: 0px 30px;
   background: $gray;
   color: $white;
-  height: 70px;
 }
 
-.navbar-menu {
-  width: 70%; 
-  display: flex;
-  justify-content: space-around;
-  padding: 20px;
-  list-style: none;
-}
-
-.navbar-name {
-  width: 100%;
-  font-size: 1.5rem;
-  padding: 10px;
+.navbar-brand {
+  font-family: $cursive;
+  font-size: 3rem;
 }
 
 .navbar-link {
@@ -96,10 +108,6 @@ $white: #fff;
   padding: 15px;
 }
 
-.section-image {
-  
-}
-
 /* Cover */
 
 .main-title {
@@ -107,15 +115,17 @@ $white: #fff;
   color: $white;
 }
 
-.text, 
-.specialty-text {
+.text {
   @extend %text-style;
   color: $white;
 }
 
 .cover {
   @extend %section-padding;
-  background: url(../../img/cover.png) center / cover no-repeat;
+  background: url(../../img/cover-lg.png) center / cover no-repeat;
+  &::before {
+    @extend %dark-opacity;
+  }
 }
 
 /* Our story */
@@ -126,22 +136,17 @@ $white: #fff;
 }
 
 .story-title {
-  width: 100%;
-  padding-bottom: 35px;
-  font-size: 3rem;
-  font-weight: bold;
-  color: $gray;
+  @extend %section-title-style;
 }
 
 .story-text {
   color: $gray;
   @extend %text-style;
-  width: 100%;
 }
 
 .story-img {
   @extend %img-div;
-  background: url(../../img/story-img.jpg) center / cover no-repeat;
+  background: url(../../img/story-img.png) center / cover no-repeat;
 }
 
 /* Our Specialty */
@@ -149,10 +154,13 @@ $white: #fff;
 .specialty {
   background: url(../../img/section2.png) center / cover no-repeat;
   @extend %section-padding;
+  &::before {
+    @extend %dark-opacity;
+  }
 }
 
 .specialty-title  {
-  @extend %main-title-style;
+  @extend %section-title-style;
   color: $white;
 }
 
@@ -165,7 +173,7 @@ $white: #fff;
 }
 
 .menu-title {
-  @extend %main-title-style;
+  @extend %section-title-style;
   padding-bottom: 40px;
   color: $gray;
 }
@@ -173,18 +181,19 @@ $white: #fff;
 /* Contact */
 
 .contact {
+  @extend %white-img-bg;
   @extend %section-padding;
   color: $gray;
 }
 
 .contact-title {
-  @extend %main-title-style;
+  @extend %section-title-style;
   padding-bottom: 40px;
 }
 
 .contact-img {
   @extend %img-div;
-  background: url(../../img/contact.jpg) center / cover no-repeat;
+  background: url(../../img/contact.png) center / cover no-repeat;
 }
 
 .contact-text {
@@ -194,6 +203,7 @@ $white: #fff;
 /* Footer */
 
 .footer {
+  z-index: 1;
   height: 70px;
   padding: 30px;
   bottom: 0;
