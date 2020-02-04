@@ -1,5 +1,4 @@
 function header() {
-
   const addHeader = () => {
     const content = document.getElementById('content');
     const header = document.createElement('header');

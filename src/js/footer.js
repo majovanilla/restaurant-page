@@ -1,4 +1,5 @@
 function footer() {
+  const content = document.getElementById('content');
   const footer = document.createElement('footer');
   const text = document.createElement('div');
   const textInput = document.createTextNode('Created by majo_vanilla');
