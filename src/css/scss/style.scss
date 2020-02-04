@@ -1,14 +1,10 @@
 @use 'reset';
 @import url('https://fonts.googleapis.com/css?family=Dancing+Script|Open+Sans&display=swap');
 
-/* Variables */
-
 $gray: #2b2a2a;
 $white: #fff;
 $cursive: 'Dancing Script', cursive;
 $sans: 'Open Sans', sans-serif;
-
-/* Extends */
 
 %section-padding {
   padding: 120px 100px;
@@ -54,8 +50,6 @@ $sans: 'Open Sans', sans-serif;
   top: 70px;
 }
 
-/* Header */
-
 .nav-bar {
   z-index: 1;
   position: fixed;
@@ -88,8 +82,6 @@ $sans: 'Open Sans', sans-serif;
   border-bottom: 1px $white solid;
 }
 
-/* Main */
-
 .landing-section {
   margin-top: 70px;
   width: 100%;
@@ -108,8 +100,6 @@ $sans: 'Open Sans', sans-serif;
   padding: 15px;
 }
 
-/* Cover */
-
 .main-title {
   @extend %main-title-style;
   color: $white;
@@ -127,8 +117,6 @@ $sans: 'Open Sans', sans-serif;
     @extend %dark-opacity;
   }
 }
-
-/* Our story */
 
 .story {
   background: url(../../img/gray-bg.jpg) center / cover no-repeat;
@@ -149,8 +137,6 @@ $sans: 'Open Sans', sans-serif;
   background: url(../../img/story-img.png) center / cover no-repeat;
 }
 
-/* Our Specialty */
-
 .specialty {
   background: url(../../img/section2.png) center / cover no-repeat;
   @extend %section-padding;
@@ -164,8 +150,6 @@ $sans: 'Open Sans', sans-serif;
   color: $white;
 }
 
-/* Menu */
-
 .menu {
   @extend %section-padding;
   @extend %white-img-bg;
@@ -177,8 +161,6 @@ $sans: 'Open Sans', sans-serif;
   padding-bottom: 40px;
   color: $gray;
 }
-
-/* Contact */
 
 .contact {
   @extend %white-img-bg;
@@ -199,8 +181,6 @@ $sans: 'Open Sans', sans-serif;
 .contact-text {
   @extend %text-style;
 }
-
-/* Footer */
 
 .footer {
   z-index: 1;
