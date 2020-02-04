@@ -2,7 +2,7 @@
 
 > This is a restaurant one page with interactive menu.
 
-![screenshot](img/screenshot.png)
+![screenshot](./scr/img/screenshot.png)
 
 This project has these features:
   - One page menu.
