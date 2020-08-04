@@ -1,3 +1,5 @@
+import iconSrc from '../img/icon.png';
+
 function home() {
   const section = document.querySelector('.landing-section');
   const title = document.createElement('h1');
@@ -12,7 +14,7 @@ function home() {
     title.textContent = 'Conscious Cuisine';
     text.textContent = 'Ciudad de México';
     div.classList.add('col-8', 'row', 'text-center', 'justify-content-center');
-    icon.setAttribute('src', '../src/img/icon.png');
+    icon.setAttribute('src', iconSrc);
     div.append(title);
     div.append(icon);
     div.append(text);
